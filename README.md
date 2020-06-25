@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: navikt/github-app-token-generator
+    - uses: navikt/github-app-token-generator@v1
       id: get-token
       with:
         private-key: ${{ secrets.PRIVATE_KEY }}
