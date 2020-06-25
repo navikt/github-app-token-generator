@@ -11,7 +11,7 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
     - uses: navikt/github-app-token-generator
       id: get-token
