@@ -28,4 +28,4 @@ jobs:
 
 ## Requirements
 
-The action needs two input parameters, `private_key` and `app_id`. To get these, simply create a GitHub App. The private key can be generated and downloaded, and should be added to the repos as a secret.
+The action needs two input parameters, `private-key` and `app-id`. To get these, simply create a GitHub App. The private key can be generated and downloaded, and should be added to the repos as a secret.
