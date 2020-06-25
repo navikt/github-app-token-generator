@@ -1,6 +1,6 @@
-# GitHub App installation token generator
+# GitHub App installation access token generator
 
-GitHub Action that can be used to generate an installation token for a GitHub App. This token can for instance be used to clone repos, given the GitHub App has sufficient permissions to do so.
+GitHub Action that can be used to generate an installation access token for a GitHub App. This token can for instance be used to clone repos, given the GitHub App has sufficient permissions to do so.
 
 ## Usage
 

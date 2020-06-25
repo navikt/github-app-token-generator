@@ -20,7 +20,7 @@ token=$(curl -s -X POST \
 https://api.github.com/app/installations/${installation_id}/access_tokens | jq -r .token)
 
 if [ "$token" = "null" ]; then
-  echo "Unable to generate installation token"
+  echo "Unable to generate installation access token"
   exit 1
 fi
 

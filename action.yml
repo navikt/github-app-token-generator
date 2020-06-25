@@ -1,5 +1,5 @@
-name: GitHub App installation token generator
-description: Generate an installation token for a GitHub App that can be for instance used to clone other repositories
+name: GitHub App installation access token generator
+description: Generate an installation access token for a GitHub App that can be for instance used to clone other repositories
 inputs:
   private-key:
     description: Private key for the GitHub App
@@ -9,10 +9,14 @@ inputs:
     required: true
 outputs:
   token:
-    description: Installation token for the GitHub App
+    description: Installation access token for the GitHub App
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.private-key }}
     - ${{ inputs.app-id }}
+author: Christer Edvartsen <christer.edvartsen@nav.no>
+branding:
+  icon: unlock
+  color: red
