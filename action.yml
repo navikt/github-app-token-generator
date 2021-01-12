@@ -7,6 +7,9 @@ inputs:
   app-id:
     description: GitHub App ID
     required: true
+  repo:
+    description: Override GITHUB_REPOSITORY when creating the installation ID
+    required: false
 outputs:
   token:
     description: Installation access token for the GitHub App

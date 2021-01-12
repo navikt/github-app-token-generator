@@ -29,3 +29,14 @@ jobs:
 ## Requirements
 
 The action needs two input parameters, `private-key` and `app-id`. To get these, simply create a GitHub App. The private key can be generated and downloaded, and should be added to the repos as a secret.
+
+The installation ID that is used during the creation of the access token is created against the repo running the action. If you need to create the installation ID for a different repo you can use the `repo` input:
+
+```yaml
+uses: navikt/github-app-token-generator@v1
+id: get-token
+with:
+  private-key: ${{ secrets.PRIVATE_KEY }}
+  app-id: ${{ secrets.APP_ID }}
+  repo: some/repo
+```
