@@ -3,6 +3,8 @@ export PRIVATE_KEY=${1:?Usage: ${0} <private-key> <app-id>}
 export APP_ID=${2:?Usage: ${0} <private-key> <app-id>}
 repo=${GITHUB_REPOSITORY:?Missing required GITHUB_REPOSITORY environment variable}
 
+[[ ! -z "$INPUT_REPO" ]] && repo=$INPUT_REPO
+
 jwt=$(ruby $(dirname $0)/generate-jwt.rb)
 installation_id=$(curl -s \
 -H "Authorization: Bearer ${jwt}" \
