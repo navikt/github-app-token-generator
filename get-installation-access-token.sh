@@ -5,7 +5,7 @@ repo=${GITHUB_REPOSITORY:?Missing required GITHUB_REPOSITORY environment variabl
 
 [[ ! -z "$INPUT_REPO" ]] && repo=$INPUT_REPO
 
-jwt=$(ruby $(dirname $0)/generate-jwt.rb)
+jwt=$(ruby $(dirname $0)/generate_jwt.rb)
 response=$(curl -s -H "Authorization: Bearer ${jwt}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${repo}/installation)
 installation_id=$(echo $response | jq -r .id)
 
