@@ -8,7 +8,7 @@ repo=${GITHUB_REPOSITORY:?Missing required GITHUB_REPOSITORY environment variabl
 jwt=$(ruby $(dirname $0)/generate-jwt.rb)
 installation_id=$(curl -s \
 -H "Authorization: Bearer ${jwt}" \
--H "Accept: application/vnd.github.machine-man-preview+json" \
+-H "Accept: application/vnd.github.v3+json" \
 https://api.github.com/repos/${repo}/installation | jq -r .id)
 
 if [ "$installation_id" = "null" ]; then
@@ -18,7 +18,7 @@ fi
 
 token=$(curl -s -X POST \
 -H "Authorization: Bearer ${jwt}" \
--H "Accept: application/vnd.github.machine-man-preview+json" \
+-H "Accept: application/vnd.github.v3+json" \
 https://api.github.com/app/installations/${installation_id}/access_tokens | jq -r .token)
 
 if [ "$token" = "null" ]; then
