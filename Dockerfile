@@ -3,5 +3,5 @@ WORKDIR /action
 RUN gem install jwt && \
     apk add jq && \
     apk add curl
-COPY generate-jwt.rb get-installation-access-token.sh ./
+COPY generate_jwt.rb get-installation-access-token.sh ./
 ENTRYPOINT ["/action/get-installation-access-token.sh"]
