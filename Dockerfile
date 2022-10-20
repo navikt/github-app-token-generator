@@ -1,4 +1,4 @@
-FROM ruby:alpine3.12
+FROM ghcr.io/piwikpro/ruby:alpine3.12
 WORKDIR /action
 RUN gem install jwt && \
     apk add jq && \
