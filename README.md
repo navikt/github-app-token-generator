@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: navikt/github-app-token-generator@v1
+    - uses: idealo/github-app-token-generator@v1.0.0
       id: get-token
       with:
         private-key: ${{ secrets.PRIVATE_KEY }}
@@ -33,7 +33,7 @@ The action needs two input parameters, `private-key` and `app-id`. To get these,
 The installation ID that is used during the creation of the access token is created against the repo running the action. If you need to create the installation ID for a different repo you can use the `repo` input:
 
 ```yaml
-uses: navikt/github-app-token-generator@v1
+uses: idealo/github-app-token-generator@v1.0.0
 id: get-token
 with:
   private-key: ${{ secrets.PRIVATE_KEY }}
