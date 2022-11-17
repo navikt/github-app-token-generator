@@ -25,4 +25,4 @@ if [ "$token" = "null" ]; then
     exit 1
 fi
 
-echo "::set-output name=token::${token}"
+echo "token=${token}" >> "$GITHUB_OUTPUT"
