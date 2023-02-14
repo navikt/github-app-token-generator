@@ -16,8 +16,8 @@ jobs:
     - uses: idealo/github-app-token-generator@v1.0.0
       id: get-token
       with:
-        private-key: ${{ secrets.PRIVATE_KEY }}
-        app-id: ${{ secrets.APP_ID }}
+        private-key: ${{ secrets.IDEALO_BOT_GH_APP_PRIVATE_KEY }}
+        app-id: ${{ secrets.IDEALO_BOT_GH_APP_ID }}
 
     - name: Check out an other repo
       uses: actions/checkout@v2
@@ -36,7 +36,7 @@ The installation ID that is used during the creation of the access token is crea
 uses: idealo/github-app-token-generator@v1.0.0
 id: get-token
 with:
-  private-key: ${{ secrets.PRIVATE_KEY }}
-  app-id: ${{ secrets.APP_ID }}
+  private-key: ${{ secrets.IDEALO_BOT_GH_APP_PRIVATE_KEY }}
+  app-id: ${{ secrets.IDEALO_BOT_GH_APP_ID }}
   repo: some/repo
 ```
