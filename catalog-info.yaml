@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: github-app-token-generator
+  description: GitHub Action to generate an installation access token for a GitHub App
+  links:
+    - url: https://confluence.idealo.tools/display/PO/GitHub+Actions+and+Runners
+      title: Go GitHub
+  annotations:
+    github.com/project-slug: idealo/github-app-token-generator
+    github.com/team-slug: idealo/compute
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - gitHub-action
+    - gitHub-app
+    - gitHub-access-token
+spec:
+  type: service
+  lifecycle: production
+  owner: group:compute
