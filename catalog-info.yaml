@@ -11,9 +11,9 @@ metadata:
     github.com/team-slug: idealo/compute
     backstage.io/techdocs-ref: dir:.
   tags:
-    - gitHub-action
-    - gitHub-app
-    - gitHub-access-token
+    - github-action
+    - github-app
+    - github-access-token
 spec:
   type: service
   lifecycle: production
