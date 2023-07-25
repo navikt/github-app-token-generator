@@ -1,5 +1,5 @@
-site_name: 'github-app-token-generator'
-site_description: 'GitHub Action that can be used to generate an installation access token for a GitHub App.'
+site_name: 'your documentation site name'
+site_description: 'a brief description'
 #uncomment the below lines if you want to enable the edit button in your techdocs
 #edit_uri: blob/main/docs/ #don't change it, just uncomment
 #repo_url: '<insert your repo url here>'
