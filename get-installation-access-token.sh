@@ -1,6 +1,20 @@
 #!/bin/sh -e
-export PRIVATE_KEY=${1:?Usage: ${0} <private-key> <app-id>}
-export APP_ID=${2:?Usage: ${0} <private-key> <app-id>}
+
+export PRIVATE_KEY="$1"
+export APP_ID="$2"
+
+if [ -z "$PRIVATE_KEY" ]; then
+    echo "Private key not specified."
+    echo "Usage: ${0} <private-key> <app-id>"
+    exit 1
+fi
+
+if [ -z "$APP_ID" ]; then
+    echo "Application ID not specified."
+    echo "Usage: ${0} <private-key> <app-id>"
+    exit 1
+fi
+
 repo=${GITHUB_REPOSITORY:?Missing required GITHUB_REPOSITORY environment variable}
 
 [ -n "$INPUT_REPO" ] && repo="$INPUT_REPO"
