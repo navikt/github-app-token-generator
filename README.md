@@ -11,16 +11,16 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - uses: navikt/github-app-token-generator@v1
       id: get-token
       with:
-        private-key: ${{ secrets.PRIVATE_KEY }}
-        app-id: ${{ secrets.APP_ID }}
+        private-key: "${{ secrets.PRIVATE_KEY }}"
+        app-id: "${{ secrets.APP_ID }}"
 
     - name: Check out an other repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: owner/repo
         token: ${{ steps.get-token.outputs.token }}
@@ -36,7 +36,7 @@ The installation ID that is used during the creation of the access token is crea
 uses: navikt/github-app-token-generator@v1
 id: get-token
 with:
-  private-key: ${{ secrets.PRIVATE_KEY }}
-  app-id: ${{ secrets.APP_ID }}
+  private-key: "${{ secrets.PRIVATE_KEY }}"
+  app-id: "${{ secrets.APP_ID }}"
   repo: some/repo
 ```
