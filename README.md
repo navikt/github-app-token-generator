@@ -28,7 +28,9 @@ jobs:
 
 ## Requirements
 
-The action needs two input parameters, `private-key` and `app-id`. To get these, simply create a GitHub App. The private key can be generated and downloaded, and should be added to the repos as a secret.
+The action needs two input parameters, `private-key` and `app-id`. To get these, simply create a GitHub App. The private key can be generated and downloaded, and should be added to the repos as a secret. Known supported private key formats are
+* PKCS#1 RSAPrivateKey** (PEM header: BEGIN RSA PRIVATE KEY)
+* PKCS#8 PrivateKeyInfo* (PEM header: BEGIN PRIVATE KEY)
 
 The installation ID that is used during the creation of the access token is created against the repo running the action. If you need to create the installation ID for a different repo you can use the `repo` input:
 
